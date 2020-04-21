@@ -125,12 +125,14 @@ export default {
       }
       &:last-child {
         margin-right: 0;
+        img {
+          max-width: 160px;
+        }
       }
     }
     img {
       margin-bottom: 34px;
-      max-width: 201px;
-      max-height: 147px;
+      width: 100%;
     }
     span {
       display: inline-block;
