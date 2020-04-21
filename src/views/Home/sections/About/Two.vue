@@ -1,21 +1,26 @@
 <template>
   <div class="two">
-    <div class="two__title-wrapper">
-      <SVGSkillTitleLeft />
-      <h2 class="two__title">
-        <span>How it all</span><br>
-        <span> works</span>
-      </h2>
-      <SVGSkillTitleRight />
+    <div class="two__wrapper">
+      <div class="two__title-wrapper">
+        <SVGSkillTitleLeft />
+        <h2 class="two__title">
+          <span>How it all</span><br>
+          <span> works</span>
+        </h2>
+        <SVGSkillTitleRight />
+      </div>
+      <div class="two__text">
+        First Vessel using Ferrum spawns Chrome which goes to one or more
+        urls in start_urls, in our case it's only one. After Chrome reports back
+        that page is loaded with all the resources it needs the first default callback
+        parse is invoked. In the parse callback, we loop through the quote elements
+        using a CSS Selector, yield a Hash with the extracted quote text and author
+        and look for a link to the next page and schedule another request using the
+        same parse method as callback.
+      </div>
     </div>
-    <div class="two__text">
-      First Vessel using Ferrum spawns Chrome which goes to one or more
-      urls in start_urls, in our case it's only one. After Chrome reports back
-      that page is loaded with all the resources it needs the first default callback
-      parse is invoked. In the parse callback, we loop through the quote elements
-      using a CSS Selector, yield a Hash with the extracted quote text and author
-      and look for a link to the next page and schedule another request using the
-      same parse method as callback.
+    <div class="two__img">
+      <img src="@/assets/images/home/start.png" alt="image">
     </div>
   </div>
 </template>
@@ -46,11 +51,14 @@ export default {
 
 <style lang="scss" scoped>
 .two {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 242px;
   @include sm {
     padding-bottom: 120px;
   }
   &__title {
+    white-space: nowrap;
     @include sm {
       margin-bottom: 32px;
     }
@@ -90,6 +98,12 @@ export default {
   &__text {
     max-width: 560px;
     line-height: 32px;
+  }
+  &__img {
+    padding-top: 120px;
+    @include md {
+      display: none;
+    }
   }
 }
 </style>
