@@ -44,9 +44,7 @@ export default {
         },
         {
           text: 'Extendable',
-          // TODO: fix bug with meet_ext.png
-          // imgPath: `/home/meet_ext.png`
-          imgPath: `/home/meet_chrome.png`
+          imgPath: `/home/meet_ext.png`
         }
       ]
     }
@@ -131,6 +129,8 @@ export default {
     }
     img {
       margin-bottom: 34px;
+      max-width: 201px;
+      max-height: 147px;
     }
     span {
       display: inline-block;
