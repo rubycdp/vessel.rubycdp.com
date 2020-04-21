@@ -2,22 +2,20 @@
   <div class="two">
     <div class="two__title-wrapper">
       <SVGSkillTitleLeft />
-      <h2 class="two__title">{{ title }}</h2>
+      <h2 class="two__title">
+        <span>How it all</span><br>
+        <span> works</span>
+      </h2>
       <SVGSkillTitleRight />
     </div>
-    <div class="two__skills">
-      <div class="two__triggers">
-        <div
-          class="two-skill"
-          v-for="(skill, index) in skills"
-          :key="index"
-        >
-          <a :href="skill.href" target="_blank">{{ skill.name }}</a>
-        </div>
-      </div>
-      <div class="two__slides">
-        <img src="@/assets/images/home/skill_02.png" alt="skill">
-      </div>
+    <div class="two__text">
+      First Vessel using Ferrum spawns Chrome which goes to one or more
+      urls in start_urls, in our case it's only one. After Chrome reports back
+      that page is loaded with all the resources it needs the first default callback
+      parse is invoked. In the parse callback, we loop through the quote elements
+      using a CSS Selector, yield a Hash with the extracted quote text and author
+      and look for a link to the next page and schedule another request using the
+      same parse method as callback.
     </div>
   </div>
 </template>
@@ -34,29 +32,13 @@ export default {
   },
   data () {
     return {
-      title: 'Skillful',
-      skills: [
-        {
-          name: 'Navigation & finders',
-          href: 'https://github.com/rubycdp/ferrum#navigation'
-        },
-        {
-          name: 'Screenshots',
-          href: 'https://github.com/rubycdp/ferrum#screenshots'
-        },
-        {
-          name: 'Mouse & keyboard',
-          href: 'https://github.com/rubycdp/ferrum#mouse'
-        },
-        {
-          name: 'Network, cookies, headers',
-          href: 'https://github.com/rubycdp/ferrum#network'
-        },
-        {
-          name: 'JS, frames, dialogs',
-          href: 'https://github.com/rubycdp/ferrum#javascript'
-        }
-      ]
+      text: `First Vessel using Ferrum spawns Chrome which goes to one or more 
+        urls in start_urls, in our case it's only one. After Chrome reports back 
+        that page is loaded with all the resources it needs the first default callback 
+        parse is invoked. In the parse callback, we loop through the quote elements 
+        using a CSS Selector, yield a Hash with the extracted quote text and author 
+        and look for a link to the next page and schedule another request using the 
+        same parse method as callback.`
     }
   }
 }
@@ -76,7 +58,7 @@ export default {
   &__title-wrapper {
     position: relative;
     display: inline-block;
-    margin-bottom: 43px;
+    margin-bottom: 20px;
     @include sm {
       margin-bottom: 0;
     }
@@ -85,106 +67,29 @@ export default {
       bottom: 50%;
       transform: translateY(48%);
       &:first-child {
-        left: -37px;
+        left: -74px;
         @include sm {
-          transform: scale(0.6641) translate(0px, 75%);
+          transform: scale(0.6641) translate(21px, 72%);
         }
         @include xs {
-          left: -27px;
+          left: -75px;
         }
       }
       &:last-child {
-        right: -48px;
-        bottom: 45%;
+        right: -43px;
+        bottom: 49%;
         @include sm {
-          transform: scale(0.6641) translate(-20px, 80%);
+          transform: scale(0.6641) translate(6px, 81%);
         }
         @include xs {
-          right: -53px;
           bottom: 49%;
         }
       }
     }
   }
-  &__skills {
-    display: flex;
-    @include xs {
-      flex-wrap: wrap;
-    }
-  }
-  &__triggers {
-    display: flex;
-    flex-direction: column;
-    @include md {
-      flex-shrink: 0;
-      margin-right: 70px;
-    }
-    @include sm {
-      flex-shrink: 0;
-      margin-right: 25px;
-    }
-    @include xs {
-      flex-direction: initial;
-      overflow-x: auto;
-      max-width: 100%;
-      margin-left: -24px;
-      margin-right: -24px;
-      padding: 4px 16px;
-      padding-bottom: 20px;
-      margin-bottom: 28px;
-    }
-    .two-skill {
-      position: relative;
-      align-self: flex-start;
-      font-size: 24px;
-      font-weight: 500;
-      line-height: 1.35;
-      margin-bottom: 24px;
-      cursor: pointer;
-      transition: color .1s;
-      a {
-        color: $white;
-        opacity: 1;
-        transition: opacity .1s;
-      }
-      @include sm {
-        font-size: 20px;
-        margin-bottom: 16px;
-        line-height: 1.2;
-      }
-      @include xs {
-        margin-bottom: 0px;
-        margin-right: 16px;
-        white-space: nowrap;
-        &:last-child {
-          margin-right: 16px;
-        }
-      }
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &:hover {
-        a {
-          opacity: .7;
-        }
-      }
-      &_active {
-        a {
-          // color: $red;
-          font-weight: bold;
-        }
-      }
-    }
-  }
-  &__slides {
-    margin-top: -68px;
-    margin-left: auto;
-    @include md {
-      margin-top: 0;
-    }
-    @include xs {
-      padding: 0 16px;
-    }
+  &__text {
+    max-width: 560px;
+    line-height: 32px;
   }
 }
 </style>
