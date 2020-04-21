@@ -6,8 +6,8 @@
         <a href="#scroll-one" v-smooth-scroll="scrollOptions">
           {{ explore }}
         </a>
-        <a :href="links.ferrum.path" target="_blank">
-          {{ links.ferrum.text }}
+        <a :href="links.vessel.path" target="_blank">
+          {{ links.vessel.text }}
         </a>
       </div>
       <img class="index__bg-image" src="@/assets/images/home/cover_illistration.png" alt="image">
@@ -24,11 +24,11 @@ export default {
   },
   data () {
     return {
-      title: 'Fearless Ruby Chrome driver',
+      title: 'high-level crawling framework',
       links: {
-        ferrum: {
+        vessel: {
           text: 'GitHub',
-          path: links.ferrum
+          path: links.vessel
         }
       },
       explore: 'Explore',
@@ -46,7 +46,7 @@ export default {
   height: 100vh;
   min-height: 100%;
   max-height: 1400px;
-  background: url("../../../assets/images/home/cover_illistration.png") 86% 52%/45% no-repeat;
+  background: url("../../../assets/images/home/cover_illistration.png") 84% -3%/45% no-repeat;
   @include md {
     height: 100%;
     background-position: 50% 100%;
