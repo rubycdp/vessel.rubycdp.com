@@ -42,12 +42,12 @@ export default {
           }
         },
         {
-          name: 'Vessel',
+          name: 'Ferrum',
           description: `In this simple framework you can build and start running 
             in parallel your crawler which works on top of Ferrum`,
           link: {
             text: 'See more',
-            path: links.vessel
+            path: links.ferrum
           }
         }
       ]
@@ -137,9 +137,9 @@ export default {
         line-height: 1.2;
       }
       &:hover {
-        color: $red;
+        color: $purple;
         svg path {
-          fill: $red;
+          fill: $purple;
         }
       }
     }

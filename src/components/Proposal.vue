@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       text: 'Let’s try',
-      path: links.ferrum
+      path: links.vessel
     }
   }
 }
@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 .proposal {
   padding: 114px 0;
-  background: $red;
+  background: $purple;
   @include sm {
     padding: 60px 0;
   }

@@ -9,14 +9,12 @@
 <script>
 import One from '@/views/Home/sections/About/One'
 import Two from '@/views/Home/sections/About/Two'
-import Three from '@/views/Home/sections/About/Three'
 
 export default {
   name: 'About',
   components: {
     One,
-    Two,
-    Three
+    Two
   },
   data () {
     return {
