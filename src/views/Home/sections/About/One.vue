@@ -28,21 +28,25 @@ export default {
   data () {
     return {
       title: 'Meet',
-      text: `Ferrum provides you a high level API interface to Chrome browser and allows 
-        you to fully automate it and grab data from any public site you want. 
-        There’s no additional software required — only Chrome, Ruby and you.`,
+      text: `Vessel is Ruby high-level web crawling framework based on Ferrum for 
+        extracting the data you need from websites. It can be used in a wide range 
+        of scenarios, like data mining, monitoring or historical archival. 
+        For automated testing we recommend Cuprite. Fast as Chrome, dead simple 
+        and yet extendable.`,
       advantages: [
         {
-          text: 'Pure Chrome',
+          text: 'Fast as Chrome',
           imgPath: '/home/meet_chrome.png'
         },
         {
-          text: 'Pure Ruby',
-          imgPath: '/home/meet_ruby.png'
+          text: 'Dead simple',
+          imgPath: '/home/meet_simple.png'
         },
         {
-          text: 'No addiction',
-          imgPath: '/home/meet_addiction.png'
+          text: 'Extendable',
+          // TODO: fix bug with meet_ext.png
+          // imgPath: `/home/meet_ext.png`
+          imgPath: `/home/meet_chrome.png`
         }
       ]
     }
@@ -90,7 +94,7 @@ export default {
     }
   }
   &__text {
-    max-width: 537px;
+    max-width: 563px;
     line-height: 32px;
     margin-bottom: 95px;
     margin-top: 0;
