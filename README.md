@@ -1,4 +1,4 @@
-# Ferrum website
+# Vessel website
 
 ## Project setup
 ```
